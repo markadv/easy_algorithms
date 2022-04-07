@@ -6,7 +6,7 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-// Version 1
+//version1
 // function reverse(str) {
 //   temp = [];
 //   str.split("");
@@ -17,6 +17,7 @@
 //   return temp;
 // }
 
+//version2
 function reverse(str) {
   temp = str.split("");
   temp.reverse();
