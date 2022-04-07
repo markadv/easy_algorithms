@@ -6,28 +6,25 @@
 // maxChar("apple 1231111") === "1"
 
 function maxChar(str) {
-  let temp = str.split("");
   let chars = {};
-  for (let n of temp) {
-    //if n is not undefined or null, means it is true
-    // Version 1
-    // if (!chars[n]) {
-    //   chars[n] = 1;
-    // } else {
-    //   chars[n]++;
-    // }
-    chars[n] = chars[n] + 1 || 1;
-  }
-  console.log(chars);
-  let max = 0;
-  let maxKey = "";
-  for (let char in chars) {
-    if (chars[char] > max) {
-      max = chars[char];
-      maxKey = char;
+  for (let n of str) {
+    if (!chars[n]) {
+      chars[n] = 1;
+    } else {
+      chars[n]++;
     }
   }
-  return maxKey;
+
+  let max = 0;
+  let maxStr = "";
+
+  for (let char in chars) {
+    if (max < chars[char]) {
+      max = chars[char];
+      maxStr = char;
+    }
+  }
+  return maxStr;
 }
 
 module.exports = maxChar;
