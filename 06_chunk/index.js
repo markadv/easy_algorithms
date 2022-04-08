@@ -8,9 +8,8 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
+// MySolution
 function chunk(array, size) {
-  //slice the array based on chunk size then return a new array
-  // array.length / size for the number of slices (this is constant)
   let temp = [];
   let splice = [];
   const div = array.length / size;
@@ -23,8 +22,35 @@ function chunk(array, size) {
       temp.push(splice);
     }
   }
-  console.log(temp);
   return temp;
 }
 
 module.exports = chunk;
+
+// Alternative solution
+// function chunk(array, size) {
+//   const chunked = [];
+//   let index = 0;
+//   while (index < array.length) {
+//     chunked.push(array.slice(index, index + size));
+//     index += size;
+//   }
+//   return chunked;
+// }
+
+// function chunk(array, size) {
+//   const chunked = [];
+
+//   for (let element of array) {
+//     const last = chunked[chunked.length - 1]; //Retrieve the last element position inserted in chunk array
+
+//     if (!last || last.length === size) {
+//       //if the last element position of the array is undefined (!undefined === true) or is equal to the chunk size target
+//       chunked.push([element]); //then push a new array to chunked with the current element as a container
+//     } else {
+//       last.push(element); //else, push the element to the "last" array
+//     }
+//   }
+
+//   return chunked;
+// }
