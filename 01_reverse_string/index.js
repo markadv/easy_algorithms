@@ -6,6 +6,22 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
+//practice space
+function reverse(str) {}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 //version1
 // function reverse(str) {
 //   temp = [];
@@ -18,11 +34,11 @@
 // }
 
 //version2
-function reverse(str) {
-  temp = str.split("");
-  temp.reverse();
-  temp = temp.join("");
-  return temp;
-}
+// function reverse(str) {
+//   temp = str.split("");
+//   temp.reverse();
+//   temp = temp.join("");
+//   return temp;
+// }
 
 module.exports = reverse;
