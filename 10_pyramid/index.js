@@ -15,7 +15,7 @@
 //       '#####'
 
 //using recursion
-function pyramid(n, rows = 0, level = "", cols = 0) {
+function pyramid(n, rows = 0, level = "") {
   const levelWidth = n + (n - 1);
   const midpoint = Math.floor(levelWidth / 2);
   if (n === rows) {
@@ -27,8 +27,11 @@ function pyramid(n, rows = 0, level = "", cols = 0) {
     return pyramid(n, rows + 1);
   }
 
-  const add = midpoint - rows <= cols && midpoint + rows >= cols ? "#" : " ";
-  pyramid(n, rows, level + add, cols + 1);
+  const add =
+    midpoint - rows <= level.length && midpoint + rows >= level.length
+      ? "#"
+      : " ";
+  pyramid(n, rows, level + add);
 }
 
 module.exports = pyramid;
