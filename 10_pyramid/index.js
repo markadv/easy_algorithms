@@ -14,25 +14,51 @@
 //       ' ### '
 //       '#####'
 
-//using recursion
 function pyramid(n, rows = 0, level = "") {
-  const levelWidth = n + (n - 1);
-  const midpoint = Math.floor(levelWidth / 2);
-  if (n === rows) {
-    return;
-  }
-
-  if (levelWidth === level.length) {
-    console.log(level);
-    return pyramid(n, rows + 1);
-  }
-
-  const add =
-    midpoint - rows <= level.length && midpoint + rows >= level.length
-      ? "#"
-      : " ";
-  pyramid(n, rows, level + add);
+  //what is the base case
 }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//using recursion
+// function pyramid(n, rows = 0, level = "") {
+//   const levelWidth = n + (n - 1);
+//   const midpoint = Math.floor(levelWidth / 2);
+//   if (n === rows) {
+//     return;
+//   }
+
+//   if (levelWidth === level.length) {
+//     console.log(level);
+//     return pyramid(n, rows + 1);
+//   }
+
+//   const add =
+//     midpoint - rows <= level.length && midpoint + rows >= level.length
+//       ? "#"
+//       : " ";
+//   pyramid(n, rows, level + add);
+// }
 
 module.exports = pyramid;
 
